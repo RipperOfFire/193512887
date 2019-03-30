@@ -36,3 +36,19 @@ Un comando git commit es la acción de guardar o subir tus archivos a tu reposit
 
 ### i. [clone](https://git-scm.com/book/es/v1/Fundamentos-de-Git-Obteniendo-un-repositorio-Git)
 El comando git clone crea una copia del repositorio de manera local o en en servidor remoto del repositorio.
+
+
+### j. [pull](https://www.atlassian.com/git/tutorials/syncing/git-pull)
+El comando git pull se usa para obtener y descargar contenido de un repositorio remoto y actualizar inmediatamente el repositorio local para que coincida con ese contenido.
+
+
+### k. [push](https://www.atlassian.com/git/tutorials/syncing/git-push)
+El comando git push se usa para cargar contenido del repositorio local en un repositorio remoto.
+
+
+### l. [fetch](https://www.atlassian.com/git/tutorials/syncing/git-fetch)
+El comando git fetch descarga confirmaciones, archivos y referencias de un repositorio remoto a su repositorio local.
+
+
+### m. [merge](https://git-scm.com/book/es/v1/Ramificaciones-en-Git-Procedimientos-b%C3%A1sicos-para-ramificar-y-fusionar)
+El comando git merge permite tomar las líneas de desarrollo independientes creadas por git branch e integrarlas en una sola rama.
