@@ -12,7 +12,7 @@
 
 **Date:   Fri Mar 29 23:44:11 2019 -0300**
 
-    **Glosario terminado**
+**Glosario terminado**
 
 
 **commit ed4909a45f813636abccf9146f3f02ba9276d9df**
@@ -21,7 +21,7 @@
 
 **Date:   Fri Mar 29 23:43:27 2019 -0300**
 
-    **Avance 3 glosario**
+**Avance 3 glosario**
 
 
 **commit 3fb167498e730f410f1e32e0dbe07c49ce9fef3b**
@@ -30,4 +30,4 @@
 
 **Date:   Fri Mar 29 23:42:38 2019 -0300**
 
-    **Avance 2 glosario**
+**Avance 2 glosario**
