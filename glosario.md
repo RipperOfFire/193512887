@@ -52,3 +52,23 @@ El comando git fetch descarga confirmaciones, archivos y referencias de un repos
 
 ### m. [merge](https://git-scm.com/book/es/v1/Ramificaciones-en-Git-Procedimientos-b%C3%A1sicos-para-ramificar-y-fusionar)
 El comando git merge permite tomar las líneas de desarrollo independientes creadas por git branch e integrarlas en una sola rama.
+
+
+### n. [status](https://git-scm.com/book/es/v1/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio)
+Este comando te dice en qué rama estás. Es tu principal herramienta para determinar en qué estado están tus archivos.
+
+
+### o. [log](https://git-scm.com/book/es/v1/Fundamentos-de-Git-Viendo-el-hist%C3%B3rico-de-confirmaciones)
+El comando git log sirve para ver las modificaciones que se han llevado a cabo.
+
+
+### p. [checkout](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
+Este comando sirve para hacer verificaciones. Opera sobre los archivos, confirmaciones y ramas.
+
+
+### q. [Rama / Branch](https://www.atlassian.com/git/tutorials/using-branches)
+Las ramas de Git son un puntero a una instantánea de sus cambios. Cuando se desea generar un cambio, sin importar qué tan grande o pequeño sea, genera una nueva rama para encapsular las diferencias.
+
+
+### r. [Etiqueta / Tag](https://www.genbeta.com/desarrollo/tags-con-git)
+Una etiqueta o tag sirve como una rama firmada que no cambia, es decir, siempre se mantiene inalterable. Sencillamente es una cadena que apunta a un commit específico. Un tag es un nombre que puedes usar para marcar un punto específico en la historia de un repositorio.
