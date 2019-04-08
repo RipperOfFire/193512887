@@ -143,7 +143,8 @@ Se utiliza para indicar una preferencia o un requisito para cambiar a una versi�
 | RES      | n/a                     | n/a                                                                                    | status,server,date,content-type,content-length,cache-control,access-control-allow-origin,strict-transport-security | 200               | Se retorna y carga correctamente el sitio. cache-control nos informa que no se encontro un cache |
 
 
-
+| REQ/ RES | Método HTTP  (solo REQ) | URL                                        | Headers (sólo nombres)                                                                                                                                   | Status (solo RES) | Descripción                                                                                        |
+|---------:|-------------------------|--------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|----------------------------------------------------------------------------------------------------|
 | REQ      | GET                     | http://zeus.inf.ucv.cl/~ifigueroa/doku.php | Upgrade-Insecure-Requests,User-Agent,Accept,Accept-Encoding,Accept-Language,Cookie                                                                       | n/a               | Se realiza la peticion al sitio                                                                    |
 | RES      | n/a                     | n/a                                        | Date,Server,X-Powered-By,Expires,Cache-Control,Pragma,X-UA-Compatible,Set-Cookie,Vary,Content-Encoding,Content-Length,Keep-Alive,Connection,Content-Type | n/a               | Se retorna y carga correctamente el sitio. Notamos que no nos entrega ningun status en "Responses" |
 
