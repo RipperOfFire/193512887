@@ -57,7 +57,9 @@ Permite enviar información adicional junto a una petición o respuesta.
 
 
 ####   ○ [  Accept](https://developer.mozilla.org/es/docs/Web/HTTP/Headers/Accept)
+
 Anuncia que tipo de contenido el cliente puede procesar.
+
 
 ####   ○ [  Accept-Charset](https://developer.mozilla.org/es/docs/Web/HTTP/Headers/Accept-Charset)
 
@@ -132,3 +134,87 @@ Indica la URL a la que se redirige una página. Esta tiene significado cuando se
 ####   ○ [  Upgrade](https://es.wikipedia.org/wiki/Cabecera_HTTP/1.1_Upgrade)
 
 Se utiliza para indicar una preferencia o un requisito para cambiar a una versión diferente de HTTP o a otro protocolo. la actualizacion(upgrade) de la conexion debe ser solicitada por el cliente, si el servidor quiere imponer un upgrade puede enviar una respuesta "426 upgrade required". El cliente puede entonces enviar una nueva solicitud con las cabeceras upgrade apropiadas.
+
+### Tabla 1
+
+**Página http://www.inf.ucv.cl/~ifigueroa**
+
+|REQ/RES| METODO HTTP | URL | Headers | Status | Descripcion
+|--|--|--|--|--|--|
+|REQ  | GET |http://www.inf.ucv.cl/~ifigueroa | Upgrade-Insecure-Request, User-agent ,Accept,Accept-Encoding,Accept-Lenguage, Cookie |n/a |Petición inicial del recurso |
+|RES | n/a |http://zeus.inf.ucv.cl/~ifigueroa| Redirect to ,Date,Server,Location,Content-Lenght,Content-Types |301 |Se redirige a URL dada para así obtener el recurso temporalmente |
+|REQ  | GET |http://zeus.inf.ucv.cl/~ifigueroa | Upgrade-Insecure-Request, User-agent ,Accept,Accept-Encoding,Accept-Lenguage, Cookie |n/a |Petición del recurso
+|RES |n/a |http://zeus.inf.ucv.cl/~ifigueroa/|  Redirect to ,Date,Server,Location,Vary,Content-Encoding,Content-Lenght,Content-Type  |301|Se redirige a URL dada para así obtener el recurso temporalmente
+|REQ  | GET |http://zeus.inf.ucv.cl/~ifigueroa/ | Upgrade-Insecure-Request, User-agent ,Accept,Accept-Encoding,Accept-Lenguage, Cookie  |n/a |Petición del recurso
+|RES |n/a |http://zeus.inf.ucv.cl/~ifigueroa/doku.php  |  Redirect to ,Date,Server,X-Powered-By,Location,Vary,Content-Encoding,Content-Lenght,Keep Alive,Connection,Content-Type  |302|Se redirige a URL dada para así obtener el recurso temporalmente
+|REQ  | GET |http://zeus.inf.ucv.cl/~ifigueroa/doku.php  |Upgrade-Insecure-Requests, User-agent     ,Accept,Accept-Encoding,Accept-Lenguage, Cookie |n/a |Peticion del recurso
+|
+|RES  | n/a | n/a | Date, Server, X-Powered-BY, Expires,Cache control,Pragma , X-UA-Compatible,Set-Cookie,Vary,Content-Encoding,Content-Length,Keep-Alive,Connection,Content-Type| 200 |   El recurso fue enviado
+|REQ  | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/bootstrap3/assets/bootstrap/default/bootstrap.min.css | User-agent    ,Accept,Referer,Accept-Enconding, Accept-Lenguage , Cookie|n/a | Petición del recurso
+|RES  | n/a |n/a |Date,Server,Last-Modified,ETag,Accept-Ranges,Vary,Content-Encoding Content-Length, Content-Type|200 | El recurso fue enviado
+REQ  | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/exe/css.php?t=bootstrap3&tseed=44b1422730da0b8e0624124cac9afe4b|User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie|n/a| Petición del recurso
+|RES | n/a |n/a  |Date,Server ,X-Powered-By,Cache-control,Pragma,Etag,Last-modified,Vary,Content-encoding,content-lenght,Content-type |200 | El recurso fue enviado  |
+|REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/bootstrap3/assets/font-awesome/css/font-awesome.min.css| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Petición del recurso
+  |RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Vary,Content-Enconding,Content-Lenght,Content-Type |200 |El recurso fue enviado |
+  |REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/exe/jquery.php?tseed=23f888679b4f1dc26eef34902aca964f| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a |Petición del Recurso
+  |RES | n/a |n/a  |Date,Server ,X-Powered-By,Cache-Control,Pragma,ETag,Last-Modified,Vary,Content-Encoding,Content-Type |200 |El recurso fue enviado   
+ |REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/exe/js.php?t=bootstrap3&tseed=44b1422730da0b8e0624124cac9afe4b| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a |Petición del recurso
+  |RES | n/a |n/a  |Date,Server ,X-Powered-By,Cache-Control,Pragma,ETag,Last-Modified,Vary,Content-Encoding,Content-Lenght,Content-Type |200 |El recurso fue enviado
+  |REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/bootstrap3/assets/bootstrap/js/bootstrap.min.js| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Peticion del recurso
+ |RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Vary,Content-Encoding,Content-Length,Content-Type |200 |El recurso fue enviado
+  |REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/bootstrap3/assets/anchorjs/anchor.min.js| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Petición del recurso
+ |RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Vary,Content-Encoding,Content-Length,Content-Type |200 |El recurso fue enviado
+ |REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/bootstrap3/images/logo.png| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Petición del recurso
+ |RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Content-Length,Content-Type |200 |El recurso fue enviado
+ |REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/bootstrap3/images/button-bootstrap3.png| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Petición del recurso
+ |RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Content-Length,Content-Type |200 |El recurso fue enviado
+  |REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/dokuwiki/images/button-php.gif| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a |Petición del recurso
+ |RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Content-Length,Content-Type |200 |El recurso fue enviado
+ |REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/dokuwiki/images/button-html5.png| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Petición del recurso
+|RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Content-Length,Content-Type |200 |El recurso fue enviado
+|REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/dokuwiki/images/button-css.png| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Petición del recurso
+|RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Content-Length,Content-Type |200 |El recurso fue enviado
+|REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/dokuwiki/images/button-dw.png| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Petición del recurso
+|RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Content-Length,Content-Type |200 |El recurso fue enviado
+|REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/exe/indexer.php?id=start&1521917395| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Peticion del recurso
+|RES | n/a |n/a  |Date,Server ,X-Powered-By,Expires,Cache-Control,Pragma,Connection,Set-Cookie,Content-Length,Content-Type |200 |El recurso fue enviado
+|REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/plugins/note/images/important.png| User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Petición del recurso
+|RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Content-Length,Content-Type |200 |El recurso fue enviado
+|REQ | GET|http://zeus.inf.ucv.cl/~ifigueroa/lib/tpl/bootstrap3/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0|Origin, User-Agent,Accept,Referer, Accept-Enconding,Accept-Lenguage,Cookie |n/a | Petición del recurso
+|RES | n/a |n/a  |Date,Server ,Last-Modified,ETag,Accept-Ranges,Content-Length,Content-Type |200 |El recurso fue enviado
+
+
+Con la Petición inicial, se recibe un redireccionamiento al sitio por parte del servidor. Posteriormente se solicitan los permisos para acceder a los recursos y estos son enviados y así se puede visualizar  la pagina web.
+
+
+###Tabla 2
+
+**Página http://steamcommunity.com/id/xocobo12/**
+
+|REQ/RES| HTTP | URL | Headers | Status| Descripcion
+|--|--|--|--|--|--|
+|REQ  | GET |http://steamcommunity.com/id/xocobo12/| Upgrade-Insecure,User-Agent ,Accept,Accept-Encoding,Accept-Lenguage, Cookie |n/a |Petición inicial del recurso |
+|RES | n/a |n/a| Server,X-Frame-Options,Content-Security-Policy,Expires,Cache-Control,Content-Encoding,Vary, Content-Type, Content-Length, Accept-Ranges, X-Varnish, Date, Connection|200 |Se redirige a la URL dada para así obtener el recurso  |
+|REQ  | GET |http://community.edgecast.steamstatic.com/public/shared/css/motiva\_sans.css?v=qIG\_iZC1Vj_d|User-Agent, Accept, Referer, Accept-Encoding, Accept-Language|n/a |Petición  del recurso |
+|RES | n/a |n/a| Date,Server,X-Content-Type-Options,Last-Modified,ETag,Accept-Ranges,Content-Length,Cache-Control,Expires,Content-Type |200 |Recurso enviado  |
+|REQ  | GET |http://community.edgecast.steamstatic.com/public/shared/css/motiva\_sans.css?v=qIG\_iZC1Vj_d|User-Agent ,Accept,Accept-Encoding,Accept-Lenguage, Cookie |n/a |Petición  del recurso |
+|RES | n/a |n/a| Content-Encoding, Accept-Ranges, Cache-Control, Content-Type, Date, Expires, Vary,Via, X-Cache, X-Varnish, Content-Length|200 |Recurso enviado  |
+|REQ  | GET |http://community.edgecast.steamstatic.com/public/shared/css/buttons.css?v=DivqMdJb8hoZ|User-Agent, Accept, Referer, Accept-Encoding, Accept-Language |n/a |Petición  del recurso |
+|RES | n/a |n/a| Content-Encoding, Accept-Ranges, Cache-Control, Content-Type, Date, Etag, Expires, Last-Modified, Server, Vary, Via ,X-Cache, X-Varnish, Content-Length |200 |Recurso enviado  |
+|REQ  | GET |http://community.edgecast.steamstatic.com/public/shared/css/shared_global.css?v=X3a1YDQUNeXR|User-Agent, Accept, Referer, Accept-Encoding, Accept-Language|n/a |Petición  del recurso |
+|RES | n/a |n/a| Content-Encoding, Accept-Ranges, Cache-Control, Content-Type, Date, Etag, Expires, Last-Modified, Server, Vary, Via ,X-Cache, X-Varnish, Content-Length|200 |Recurso enviado  |
+|REQ  | GET |http://community.edgecast.steamstatic.com/public/css/globalv2.css?v=hWbWC6nRzb0K|User-Agent, Accept, Referer, Accept-Encoding, Accept-Language |n/a |Petición  del recurso |
+|RES | n/a |n/a| Content-Encoding, Accept-Ranges, Cache-Control, Content-Type, Date, Etag, Expires, Last-Modified, Server, Vary, Via ,X-Cache, X-Varnish, Content-Length|200 |Recurso enviado  |
+|REQ  | GET |http://community.edgecast.steamstatic.com/public/css/skin_1/modalContent.css?v=.TP5s6TzX6LLh|User-Agent, Accept, Referer, Accept-Encoding, Accept-Language |n/a |Petición  del recurso |
+|RES | n/a |n/a| Date,Server,X-Content-Type-Options,Last-Modified,ETag,Accept-Ranges,Content-Length,Cache-Control,Expires,Content-Type |200 |Recurso enviado  |
+|REQ  | GET |http://community.edgecast.steamstatic.com/public/css/skin_1/profilev2.css?v=9Xop7iiN4T28|User-Agent, Accept, Referer, Accept-Encoding, Accept-Language|n/a |Petición  del recurso |
+|RES | n/a |n/a| Content-Encoding, Accept-Ranges, Cache-Control, Content-Type, Date, Etag, Expires, Last-Modified, Server, Vary, Via ,X-Cache, X-Varnish, Content-Length |200 |Recurso enviado  |
+|REQ  | GET |http://community.edgecast.steamstatic.com/public/css/promo/summer2017/stickers.css?v=dSWX4ImqUvRw|User-Agent, Accept, Referer, Accept-Encoding, Accept-Language |n/a |Petición  del recurso |
+|RES | n/a |n/a|Content-Encoding, Accept-Ranges, Cache-Control, Content-Type, Date, Etag, Expires, Last-Modified, Server, Vary, Via ,X-Cache, X-Varnish, Content-Length |200 |Recurso enviado  |
+|REQ  | GET |http://community.edgecast.steamstatic.com/public/shared/css/shared_responsive.css?v=Sqh2tLHzRZFc|User-Agent, Accept, Referer, Accept-Encoding, Accept-Language |n/a |Petición  del recurso |
+|RES | n/a |n/a| Content-Encoding, Accept-Ranges, Cache-Control, Content-Type, Date, Etag, Expires, Last-Modified, Server, Vary, Via ,X-Cache, X-Varnish, Content-Length|200 |Recurso enviado  |
+|REQ  | GET |http://community.edgecast.steamstatic.com/public/css/skin_1/header.css?v=Ji82LT3ziuGS|User-Agent, Accept, Referer, Accept-Encoding, Accept-Language |n/a |Petición  del recurso |
+|RES | n/a |n/a| Content-Encoding, Accept-Ranges, Cache-Control, Content-Type, Date, Etag, Expires, Last-Modified, Server, Vary, Via ,X-Cache, X-Varnish, Content-Length |200 |Recurso enviado  |
+
+
+Con la petición inicial se obtiene un redireccionamiento permanente para visualizar el sitio web. Posteriormente se obtienen los recursos solicitados y se puede visualizar la pagina web, hasta cargar la página web completa.
